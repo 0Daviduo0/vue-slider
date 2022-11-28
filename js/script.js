@@ -54,5 +54,19 @@ createApp({
                 ]
             }
         }
+    },
+    methods: {
+        next() {
+            this.indexElem++;
+            if(this.indexElem > this.film.imgs.length - 1) {
+                this.indexElem = 0;
+            }
+        },
+        back() {
+            this.indexElem--;
+            if(this.indexElem < 0) {
+                this.indexElem = this.film.imgs.length - 1;
+            }
+        }
     }
 }).mount('#app')

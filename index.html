@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="back"></div>
+                    <div class="next" @click="next"></div>
                     <div v-for="(thumbs, index) in film.imgs" class="thumb" :class="indexElem === index ? 'active' : '' ">
                         <img :src="thumbs" alt="Miles Moales" />
                     </div>
